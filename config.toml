@@ -1,0 +1,72 @@
+[global]
+repetitions = 30
+init_seed = 108664
+seed_step = 1
+generations = 100
+dimensions = [10, 20, 30]
+
+
+[optimizers.DE]
+pop_size = 200
+F = 0.9
+CR = 0.6
+lambda = 0.8
+mutations = [
+    "rand1",
+    "rand2",
+    "best1",
+    "best2",
+    "randToBest1"
+]
+crossovers = [
+    "bin",
+    "exp"
+]
+
+
+
+[optimizers.PSO]
+pop_size = 200
+c1 = 0.8
+c2 = 1.2
+
+
+[global.problems.SCHWEFEL]
+lower = -512.0
+upper = 512.0
+
+[global.problems.DEJONG_ONE]
+lower = -100.0
+upper = 100.0
+
+[global.problems.ROSENBROCK]
+lower = -100.0
+upper = 100.0
+
+[global.problems.RASTRIGIN]
+lower = -30.0
+upper = 30.0
+
+[global.problems.GRIEWANGK]
+lower = -500.0
+upper = 500.0
+
+[global.problems.SINE_ENVELOPE]
+lower = -30.0
+upper = 30.0
+
+[global.problems.STRETCHED_V]
+lower = -30.0
+upper = 30.0
+
+[global.problems.ACKLEY_ONE]
+lower = -32.0
+upper = 32.0
+
+[global.problems.ACKLEY_TWO]
+lower = -32.0
+upper = 32.0
+
+[global.problems.EGGHOLDER]
+lower = -500.0
+upper = 500.0
